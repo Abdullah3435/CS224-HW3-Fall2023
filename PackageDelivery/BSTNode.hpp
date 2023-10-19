@@ -1,5 +1,6 @@
 #pragma once
 #include "Truck.hpp"
+#include <string>
 
 class BSTNode
 {
@@ -8,7 +9,8 @@ public:
     BSTNode *left;
     BSTNode *right;
 
-    BSTNode(Truck val, BSTNode *left, BSTNode *right) : val(val),
-                                                        left(left),
-                                                        right(right) {}
+    BSTNode(Truck val, BSTNode *left, BSTNode *right);
+
+    std::string print_TruckData();
+    void trip(float km);
 };

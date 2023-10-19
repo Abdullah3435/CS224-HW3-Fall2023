@@ -1,16 +1,16 @@
 #pragma once
-#include <iostream>
-using namespace std;
+#include <string>
 
 struct Truck
 {
-    string driver;
+    std::string driver;
     double petrol;
-    string regNo;
+    std::string regNo;
     int fullMileage;
     int emptyMileage;
 
-    // TODO: You may need a constructor
-    // TODO: You may need to define overloaded relational operators for binary search tree
-    // TODO: You may need other helper functions to perform the task in the assignment
+    // Constructor
+    Truck(std::string driver_, double petrol_, std::string regNo_, int fullMileage_, int emptyMileage_);
+    
+    
 };

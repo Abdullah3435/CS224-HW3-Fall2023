@@ -5,14 +5,17 @@
 class BinarySearchTree
 {
 public:
-    // TODO: You have to define the functions below.
     BinarySearchTree();
     ~BinarySearchTree();
 
-    // TODO: Design binary search tree that will be exposed to the user
+    void Insertnode(Truck mytruck);
+    void print_bst(std::string filename);
+    void Taketrips(float distance);
 
 private:
     BSTNode *root;
+    std::string finalstr;
 
-    // TODO: Design all the helper functions here that are not to be exposed to the use
+    void printInOrder(BSTNode* node);
+    void Taketrips(BSTNode* node, float km);
 };

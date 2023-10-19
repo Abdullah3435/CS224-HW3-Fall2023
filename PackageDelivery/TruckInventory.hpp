@@ -1,18 +1,16 @@
-#include <iostream>
-#include <fstream>
-#include <stdio.h>
-#include <stdlib.h>
+#pragma once
 #include "BinarySearchTree.hpp"
-#include "BSTNode.hpp"
+#include <string>
 
 class TruckInventory
 {
 private:
     BinarySearchTree bst;
 
+    std::string stringparser(std::string str, int &ind, char delim = '\n');
+
 public:
-    // You have to define the functions below
-    void loadTrucks(const string &filename);
-    void makeJourney(double distance);
-    void unloadTrucks(const string &filename);
+    void loadTrucks(const std::string &filename);
+    void makeJourney(float distance);
+    void unloadTrucks(const std::string &filename);
 };

@@ -10,6 +10,6 @@ int main()
 
     truckInventory.loadTrucks("Input.txt");
     truckInventory.makeJourney(60.0);
-    truckInventory.unloadTrucks("Trip.txt");
+    truckInventory.unloadTrucks("Trip.txt"); // to avoid intermixing of trip txt file with
     return 0;
 }
