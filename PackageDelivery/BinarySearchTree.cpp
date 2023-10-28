@@ -7,7 +7,7 @@ BinarySearchTree::BinarySearchTree()
 
 BinarySearchTree::~BinarySearchTree()
 {
-    delete root;
+    destroyTree(root);
 }
 
 void BinarySearchTree::Insertnode(Truck mytruck)
@@ -88,4 +88,20 @@ void BinarySearchTree::Taketrips(BSTNode* node, float km)
 
     // Recursively traverse RIGHT subtree
     Taketrips(node->right, km);
+}
+
+void BinarySearchTree::destroyTree(BSTNode* node)
+{
+    if (node == nullptr)
+    {
+        return;
+    }
+
+    // Recursively delete the left subtree
+    destroyTree(node->left);
+    delete node;
+    // Recursively delete the right subtree
+    destroyTree(node->right);
+
+    // Delete the current node
 }

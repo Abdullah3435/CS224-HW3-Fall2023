@@ -11,6 +11,7 @@ public:
     void Insertnode(Truck mytruck);
     void print_bst(std::string filename);
     void Taketrips(float distance);
+    void destroyTree(BSTNode* node);
 
 private:
     BSTNode *root;
